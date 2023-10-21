@@ -1,11 +1,11 @@
 fn main() {
-	let p:f32 = 520_000_000.0;
-	let r:f32 = 10.0;
-	let n:f32 = 5.0;
-	//Compound Intrest
-	let a = p*(1.0 + r/n);
-	println!("Amount is {}",a);
-	let ci = a-p;
-	println!("Compound Interest is {}",ci);
+	let p:f64 = 520_000_000.0;
+	let r:f64 = 10.0;
+	let n:f64 = 5.0;
+	//Compound Interest
+	let a = p*(1.0 + r/100.0).powf(n);
+	println!("Amount is N{}",a.floor());
+	let ci = a - p;
+	println!("Compound Interest is N{}",ci.floor());
 
 }
